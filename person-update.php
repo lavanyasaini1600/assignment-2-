@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $country = $_POST['country'];
 
 
-    $sql = "UPDATE person_form set first_name='".$fname."', last_name='".$lname."', email_id='".$emailid."', contact_no='".$cno."', add_ress='".$address."',city='".$city."',state='".$state."',country='".$country."'";
+    $sql = "UPDATE person_form set first_name='".$fname."', last_name='".$lname."', email_id='".$emailid."', contact_no='".$cno."', add_ress='".$address."',city='".$city."',state='".$state."',country='".$country."'  where id=".$_REQUEST['id'];
 
     if (mysqli_query($conn, $sql)) {
         echo "Record updated successfully";
