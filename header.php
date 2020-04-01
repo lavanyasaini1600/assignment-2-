@@ -30,6 +30,9 @@ session_start();
                 <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="register.php">Register</a>
+            </li>
+            <li class="nav-item">
                 
                 <?php
                     if(isset($_SESSION['userId'])) {
