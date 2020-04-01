@@ -9,9 +9,9 @@
 
     // Check connection
     if (!$conn) {
-        "Not Connected";
+        echo "Not Connected";
     }
-    echo "Connected successfully";
+    //echo "Connected successfully";
 ?>
 
 

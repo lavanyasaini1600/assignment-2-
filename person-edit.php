@@ -4,7 +4,8 @@ include_once ('header.php');
     if(isset($_REQUEST['id'])) {
         echo $_REQUEST['id'];
         $personid= $_REQUEST['id'];
-
+    
+        $_SESSION['userId'] =  $personid;
         $sql = "SELECT * FROM person_form where id='".$personid."'";
         $result = mysqli_query($conn, $sql);
         $person = mysqli_fetch_assoc($result);

@@ -29,9 +29,17 @@ session_start();
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="register.php">Register</a>
-            </li>
+            
+                <?php
+                 if(!isset($_SESSION['userId'])) {
+                     echo '<li class="nav-item">';
+                    echo '<a class="nav-link" href="register.php">Register</a>';
+                    echo '</li>';
+                }
+                ?>
+                
+          
+
             <li class="nav-item">
                 
                 <?php
@@ -40,8 +48,16 @@ session_start();
                     } else {
                         echo '<a class="nav-link" href="/login.php">Log In</a>';
                     }
+                   
                 ?>
             </li>
+            <li class="nav-item">
+            <?php
+        if(isset($_SESSION['userId'])) {
+                    echo "<br>Welcome ".$_SESSION['usernm'];
+        }
+        ?>
+
         </ul>
     </div>
 </nav>
